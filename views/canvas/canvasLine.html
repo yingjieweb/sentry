@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>canvas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #canvas {
+      width: 100vw;
+      height: 100vh;
+      border: 1px solid red;
+      display: block; /*因为canvas元素是行内元素，要想设置宽高，需要将其先设置成block元素*/
+    }
+  </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+</body>
+<script>
+  alert('canvas的画点并不会在标签内追加dom子节点，性能较好');
+  let canvas = document.getElementById("canvas");
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
+  let ctx = canvas.getContext("2d");
+
+  ctx.fillStyle = 'red';  //填充样式
+  ctx.strokeStyle = 'red';  //描边样式
+  ctx.linewidth = 8;  //画笔宽度
+  ctx.lineCap = 'round';  //画笔转角填充
+
+  let painting = false; //画笔标识符
+  let last;  //记录上次画笔节点位置
+
+  //划线方法封装
+  function drawLine(x1,y1,x2,y2){
+    ctx.beginPath();
+    ctx.moveTo(x1,y1);
+    ctx.lineTo(x2,y2);
+    ctx.stroke();
+  }
+
+  //判断当前设备是否是手机
+  let isTouchDevice = 'ontouchstart' in document.documentElement;
+  if (isTouchDevice) {  //如果当前设备是手机端
+    canvas.ontouchstart = (event) => {
+      let x = event.touches[0].clientX;
+      let y = event.touches[0].clientY;
+      last = [x, y]
+    };
+    canvas.ontouchmove = (event) => {
+      let x = event.touches[0].clientX;
+      let y = event.touches[0].clientY;
+      drawLine(last[0], last[1], x, y);
+      last = [x, y]
+    }
+  } else {  //如果当前设备不是手机端
+    canvas.onmousedown = (event) => {  //当鼠标点击时，启用画笔
+      painting = true;
+      last = [event.clientX,event.clientY];
+    };
+    canvas.onmousemove = (event) => {  //当鼠标移动时，根据画笔标识符判断是否划线
+      if (painting === true) {
+        drawLine(last[0],last[1],event.clientX,event.clientY);
+        last = [event.clientX,event.clientY];
+      }
+    };
+    canvas.onmouseup = () => {  //当鼠标抬起时，禁用画笔
+      painting = false;
+    }
+  }
+</script>
+</html>
