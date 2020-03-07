@@ -23,8 +23,8 @@
 <script>
   alert('canvas的画点并不会在标签内追加dom子节点，性能较好');
   let canvas = document.getElementById("canvas");
-  canvas.width = document.documentElement.clientWidth;
-  canvas.height = document.documentElement.clientHeight;
+  canvas.width = document.documentElement.clientWidth;  //width是canvas自带的属性，并不是style属性
+  canvas.height = document.documentElement.clientHeight;  //height是canvas自带的属性，并不是style属性
   let ctx = canvas.getContext("2d");
 
   ctx.fillStyle = 'red';  //填充样式
@@ -33,7 +33,7 @@
   ctx.lineCap = 'round';  //画笔转角填充
 
   let painting = false; //画笔标识符
-  let last;  //记录上次画笔节点位置
+  let last = [];  //记录上次画笔节点位置
 
   //划线方法封装
   function drawLine(x1,y1,x2,y2){
