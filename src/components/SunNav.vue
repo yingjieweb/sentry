@@ -18,18 +18,21 @@
 <style lang="scss" scoped>
   .sun-nav {
     height: 100%;
-    width: 80%;
-    background-color: darkkhaki;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
     .sun-item {
-      height: 100px;
-      width: 100px;
-      background-color: seagreen;
+      height: 60px;
+      width: 95%;
       margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      color: lightblue;
+      background-color: seagreen;
     }
   }
 </style>
