@@ -1,10 +1,12 @@
 <template>
-  <div>这里是一个心动的东西</div>
+  <div>
+    spacecraft
+  </div>
 </template>
 
-<script>
+<script lang="js">
   export default {
-    name: "SunHeart"
+    name: "Spacecraft"
   }
 </script>
 

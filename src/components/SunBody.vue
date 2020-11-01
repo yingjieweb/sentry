@@ -1,6 +1,6 @@
 <template>
   <div class="sun-body">
-    这就是个body
+    <router-view></router-view>
   </div>
 </template>
 

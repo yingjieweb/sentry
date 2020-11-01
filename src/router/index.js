@@ -1,14 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import Spacecraft from "@/views/Spacecraft"
+
 Vue.use(VueRouter)
 
 const routes = [
-  /*{
+  {
     path: '/',
-    name: 'Home',
-    component: Home
-  }*/
+    redirect: '/spacecraft'
+  },
+  {
+    path: '/spacecraft',
+    name: 'Spacecraft',
+    component: Spacecraft
+  }
 ]
 
 const router = new VueRouter({
