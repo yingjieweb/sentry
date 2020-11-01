@@ -19,7 +19,7 @@
         return Math.ceil(Math.random() * (n - m + 1))
       },
       newLine() {
-        let starCount = 80;
+        let starCount = 60;
         for (let i = 0; i < starCount; i++) {
           const i = document.createElement('i')
           i.style.height = this.random(30, 100) + 'px'
@@ -44,17 +44,18 @@
   }
 
   .container .rocket {
+    z-index: 2;
     animation: shake 0.8s linear infinite;
 
     &::after {
       content: '';
       width: 10px;
-      height: 150px;
+      height: 120px;
       background: linear-gradient(rgb(10, 158, 194), transparent);
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      bottom: -150px;
+      bottom: -120px;
     }
 
     @keyframes shake {
