@@ -2,7 +2,7 @@
   <div id="app">
 
     <el-container style="height: 100%">
-      <el-aside style="background-color: salmon;">
+      <el-aside class="aside" style="background-color: salmon;">
         <SunNav></SunNav>
       </el-aside>
       <el-main style="background-color:sandybrown;">
@@ -33,5 +33,11 @@
   #app {
     height: 100vh;
     width: 100vw;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .aside {
+      display: none;
+    }
   }
 </style>

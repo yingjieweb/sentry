@@ -43,8 +43,10 @@
       background-color: seagreen;
 
       &:hover {
-        transform: scaleY(1.1);
-        transition: all 0.3s;
+        i {
+          transform: translateX(50px) rotate(360deg) scale(1.2);
+          transition: all 0.8s;
+        }
       }
 
       i {
