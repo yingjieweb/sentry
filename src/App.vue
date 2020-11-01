@@ -27,7 +27,8 @@
 </script>
 
 <style>
-  @import "assets/styles/normalize.css";
+  @import "~@/assets/styles/reset.scss";
+  @import "~@/assets/styles/helper.scss";
 
   #app {
     height: 100vh;
