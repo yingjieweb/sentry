@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Spacecraft from "@/views/Spacecraft"
+import CubeAlbum from "@/views/CubeAlbum"
 
 Vue.use(VueRouter)
 
@@ -14,6 +15,11 @@ const routes = [
     path: '/spacecraft',
     name: 'Spacecraft',
     component: Spacecraft
+  },
+  {
+    path: '/cube-album',
+    name: 'CubeAlbum',
+    component: CubeAlbum
   }
 ]
 

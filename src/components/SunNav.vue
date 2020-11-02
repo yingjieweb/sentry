@@ -6,7 +6,11 @@
       </div>
     </router-link>
 
-    <div class="sun-item"></div>
+    <router-link to="/cube-album">
+      <div class="sun-item">
+        <i class="el-icon-menu"></i>
+      </div>
+    </router-link>
     <div class="sun-item"></div>
     <div class="sun-item"></div>
     <div class="sun-item"></div>
