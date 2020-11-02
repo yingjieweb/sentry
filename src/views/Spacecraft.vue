@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="rocket">
-      <img src="../assets/images/rocket.png" alt="">
+      <img src="../assets/images/rocket/rocket.png" alt="">
     </div>
 
     <i></i>
@@ -26,7 +26,6 @@
           i.style.left = this.random(1, 99) + '%'
           i.style.animationDuration = this.random(5, 30) / 10 + 5 + 's'
           document.querySelector('.container').appendChild(i)
-          console.log(i)
         }
       }
     }
