@@ -15,6 +15,11 @@
         <i class="el-icon-s-unfold"></i>
       </div>
     </router-link>
+    <router-link to="/time-clock">
+      <div class="sun-item">
+        <i class="el-icon-loading"></i>
+      </div>
+    </router-link>
     <div class="sun-item"></div>
     <div class="sun-item"></div>
     <div class="sun-item"></div>
