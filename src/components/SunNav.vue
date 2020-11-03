@@ -5,10 +5,14 @@
         <i class="el-icon-s-promotion"></i>
       </div>
     </router-link>
-
     <router-link to="/cube-album">
       <div class="sun-item">
         <i class="el-icon-menu"></i>
+      </div>
+    </router-link>
+    <router-link to="/progress-bar">
+      <div class="sun-item">
+        <i class="el-icon-s-unfold"></i>
       </div>
     </router-link>
     <div class="sun-item"></div>

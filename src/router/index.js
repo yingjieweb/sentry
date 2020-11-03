@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Spacecraft from "@/views/Spacecraft"
 import CubeAlbum from "@/views/CubeAlbum"
+import ProgressBar from "@/views/ProgressBar"
 
 Vue.use(VueRouter)
 
@@ -20,6 +21,11 @@ const routes = [
     path: '/cube-album',
     name: 'CubeAlbum',
     component: CubeAlbum
+  },
+  {
+    path: '/progress-bar',
+    name: 'ProgressBar',
+    component: ProgressBar
   }
 ]
 
