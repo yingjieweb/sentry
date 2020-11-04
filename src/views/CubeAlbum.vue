@@ -1,12 +1,12 @@
 <template>
   <div class="container">
     <div class="album">
-      <img class="front" src="../assets/images/cubeAlbum/front.jpg" alt="">
-      <img class="back" src="../assets/images/cubeAlbum/back.jpg" alt="">
-      <img class="left" src="../assets/images/cubeAlbum/left.jpg" alt="">
-      <img class="right" src="../assets/images/cubeAlbum/right.jpg" alt="">
-      <img class="top" src="../assets/images/cubeAlbum/top.jpg" alt="">
-      <img class="bottom" src="../assets/images/cubeAlbum/bottom.jpg" alt="">
+      <img class="front" src="../assets/images/album/front.jpg" alt="">
+      <img class="back" src="../assets/images/album/back.jpg" alt="">
+      <img class="left" src="../assets/images/album/left.jpg" alt="">
+      <img class="right" src="../assets/images/album/right.jpg" alt="">
+      <img class="top" src="../assets/images/album/top.jpg" alt="">
+      <img class="bottom" src="../assets/images/album/bottom.jpg" alt="">
     </div>
   </div>
 </template>
