@@ -5,6 +5,7 @@ import Spacecraft from "@/views/Spacecraft"
 import CubeAlbum from "@/views/CubeAlbum"
 import ProgressBar from "@/views/ProgressBar"
 import TimeClock from "@/views/TimeClock"
+import TypeWriter from "@/views/TypeWriter"
 
 Vue.use(VueRouter)
 
@@ -32,6 +33,11 @@ const routes = [
     path: '/time-clock',
     name: 'TimeClock',
     component: TimeClock
+  },
+  {
+    path: '/type-writer',
+    name: 'TypeWriter',
+    component: TypeWriter
   }
 ]
 

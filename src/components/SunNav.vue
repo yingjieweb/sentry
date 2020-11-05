@@ -17,7 +17,12 @@
     </router-link>
     <router-link to="/time-clock">
       <div class="sun-item">
-        <i class="el-icon-loading"></i>
+        <i class="el-icon-time"></i>
+      </div>
+    </router-link>
+    <router-link to="/type-writer">
+      <div class="sun-item">
+        <i class="el-icon-edit"></i>
       </div>
     </router-link>
     <div class="sun-item"></div>
