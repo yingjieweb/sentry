@@ -2,7 +2,7 @@
   <div class="container">
     <div class="text">
       <span class="word">
-        前端小白一只，希望自己能不忘初心，踏踏实实学点前端 👻
+        前端小白一只,希望自己能不忘初心,踏踏实实学点前端 👻
       </span>
       <span class="cursor">|</span>
     </div>
@@ -18,13 +18,42 @@
     methods: {
       init() {
         let str = '前端小白一只，希望自己能不忘初心，踏踏实实学点前端 👻'
-
         const word = document.querySelector('.word')
-        for (let i=1; i<str.length; i++){
+
+        /*for (let i=1; i<str.length; i++){
           setTimeout(() => {
             word.innerHTML = str.substr(0, i)
           }, (i-1) * 300)
+        }*/
+
+        //async await
+        //1.封装一个函数
+        function setText(t) {
+          return new Promise((resolve, reject) => {
+            setTimeout(() => {
+              word.innerHTML = t
+              resolve()
+            }, 300)
+          })
         }
+
+        //2.声明一个函数
+        async function main(flag) {
+          if (flag) {
+            //遍历字符制I
+            for (let i = 1; i <= str.length; i++) {
+              await setText(str.substr(0, i))
+            }
+          } else {
+            for (let i = str.length; i > 0; i--) {
+              await setText(str.substr(0, i))
+            }
+          }
+          setTimeout(() => {
+            main(!flag)
+          }, 1000)
+        }
+        main(1)
       }
     }
   }
@@ -39,6 +68,7 @@
     font-size: 48px;
     color: #ffffff;
   }
+
   .text .cursor {
     font-size: 48px;
     color: #000000;
