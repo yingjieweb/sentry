@@ -25,6 +25,11 @@
         <i class="el-icon-edit"></i>
       </div>
     </router-link>
+    <router-link to="/rotate-petals">
+      <div class="sun-item">
+        <i class="el-icon-magic-stick"></i>
+      </div>
+    </router-link>
     <div class="sun-item"></div>
     <div class="sun-item"></div>
     <div class="sun-item"></div>

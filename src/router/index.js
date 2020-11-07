@@ -6,6 +6,7 @@ import CubeAlbum from "@/views/CubeAlbum"
 import ProgressBar from "@/views/ProgressBar"
 import TimeClock from "@/views/TimeClock"
 import TypeWriter from "@/views/TypeWriter"
+import RotatePetals from "@/views/RotatePetals"
 
 Vue.use(VueRouter)
 
@@ -38,6 +39,11 @@ const routes = [
     path: '/type-writer',
     name: 'TypeWriter',
     component: TypeWriter
+  },
+  {
+    path: '/rotate-petals',
+    name: 'RotatePetals',
+    component: RotatePetals
   }
 ]
 
