@@ -30,6 +30,11 @@
         <i class="el-icon-magic-stick"></i>
       </div>
     </router-link>
+    <router-link to="/color-wave">
+      <div class="sun-item">
+        <i class="el-icon-s-grid"></i>
+      </div>
+    </router-link>
     <div class="sun-item"></div>
     <div class="sun-item"></div>
     <div class="sun-item"></div>

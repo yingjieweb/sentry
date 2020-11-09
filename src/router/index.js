@@ -7,6 +7,7 @@ import ProgressBar from "@/views/ProgressBar"
 import TimeClock from "@/views/TimeClock"
 import TypeWriter from "@/views/TypeWriter"
 import RotatePetals from "@/views/RotatePetals"
+import ColorWave from "@/views/ColorWave"
 
 Vue.use(VueRouter)
 
@@ -44,6 +45,11 @@ const routes = [
     path: '/rotate-petals',
     name: 'RotatePetals',
     component: RotatePetals
+  },
+  {
+    path: '/color-wave',
+    name: 'ColorWave',
+    component: ColorWave
   }
 ]
 
