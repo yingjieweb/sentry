@@ -8,6 +8,7 @@ import TimeClock from "@/views/TimeClock"
 import TypeWriter from "@/views/TypeWriter"
 import RotatePetals from "@/views/RotatePetals"
 import ColorWave from "@/views/ColorWave"
+import HypnosisCircle from "@/views/HypnosisCircle"
 
 Vue.use(VueRouter)
 
@@ -50,6 +51,11 @@ const routes = [
     path: '/color-wave',
     name: 'ColorWave',
     component: ColorWave
+  },
+  {
+    path: '/hypnosis-circle',
+    name: 'HypnosisCircle',
+    component: HypnosisCircle
   }
 ]
 

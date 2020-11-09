@@ -35,6 +35,11 @@
         <i class="el-icon-s-grid"></i>
       </div>
     </router-link>
+    <router-link to="/hypnosis-circle">
+      <div class="sun-item">
+        <i class="el-icon-help"></i>
+      </div>
+    </router-link>
     <div class="sun-item"></div>
     <div class="sun-item"></div>
     <div class="sun-item"></div>
