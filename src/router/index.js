@@ -9,6 +9,7 @@ import TypeWriter from "@/views/TypeWriter"
 import RotatePetals from "@/views/RotatePetals"
 import ColorWave from "@/views/ColorWave"
 import HypnosisCircle from "@/views/HypnosisCircle"
+import CartoonFan from "@/views/CartoonFan"
 
 Vue.use(VueRouter)
 
@@ -56,6 +57,11 @@ const routes = [
     path: '/hypnosis-circle',
     name: 'HypnosisCircle',
     component: HypnosisCircle
+  },
+  {
+    path: '/cartoon-fan',
+    name: 'CartoonFan',
+    component: CartoonFan
   }
 ]
 

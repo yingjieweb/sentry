@@ -40,9 +40,11 @@
         <i class="el-icon-help"></i>
       </div>
     </router-link>
-    <div class="sun-item"></div>
-    <div class="sun-item"></div>
-    <div class="sun-item"></div>
+    <router-link to="/cartoon-fan">
+      <div class="sun-item">
+        <i class="el-icon-wind-power"></i>
+      </div>
+    </router-link>
   </div>
 </template>
 
