@@ -26,7 +26,7 @@
   }
 </script>
 
-<style>
+<style lang="scss" scoped>
   @import "~@/assets/styles/reset.scss";
   @import "~@/assets/styles/helper.scss";
 

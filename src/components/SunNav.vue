@@ -1,10 +1,10 @@
 <template>
   <div class="sun-nav">
-    <router-link to="/spacecraft">
+    <!--<router-link to="/spacecraft">
       <div class="sun-item">
         <i class="el-icon-s-promotion"></i>
       </div>
-    </router-link>
+    </router-link>-->
     <router-link to="/cube-album">
       <div class="sun-item">
         <i class="el-icon-menu"></i>
