@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import HypnosisCircle from "@/views/HypnosisCircle"
 import Spacecraft from "@/views/Spacecraft"
 import CubeAlbum from "@/views/CubeAlbum"
 import ProgressBar from "@/views/ProgressBar"
@@ -8,7 +9,6 @@ import TimeClock from "@/views/TimeClock"
 import TypeWriter from "@/views/TypeWriter"
 import RotatePetals from "@/views/RotatePetals"
 import ColorWave from "@/views/ColorWave"
-import HypnosisCircle from "@/views/HypnosisCircle"
 import CartoonFan from "@/views/CartoonFan"
 
 Vue.use(VueRouter)
@@ -16,7 +16,12 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/spacecraft'
+    redirect: '/hypnosis-circle'
+  },
+  {
+    path: '/hypnosis-circle',
+    name: 'HypnosisCircle',
+    component: HypnosisCircle
   },
   {
     path: '/spacecraft',
@@ -52,11 +57,6 @@ const routes = [
     path: '/color-wave',
     name: 'ColorWave',
     component: ColorWave
-  },
-  {
-    path: '/hypnosis-circle',
-    name: 'HypnosisCircle',
-    component: HypnosisCircle
   },
   {
     path: '/cartoon-fan',

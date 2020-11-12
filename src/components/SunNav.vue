@@ -1,10 +1,15 @@
 <template>
   <div class="sun-nav">
-    <!--<router-link to="/spacecraft">
+    <router-link to="/hypnosis-circle">
+      <div class="sun-item">
+        <i class="el-icon-help"></i>
+      </div>
+    </router-link>
+    <router-link to="/spacecraft">
       <div class="sun-item">
         <i class="el-icon-s-promotion"></i>
       </div>
-    </router-link>-->
+    </router-link>
     <router-link to="/cube-album">
       <div class="sun-item">
         <i class="el-icon-menu"></i>
@@ -33,11 +38,6 @@
     <router-link to="/color-wave">
       <div class="sun-item">
         <i class="el-icon-s-grid"></i>
-      </div>
-    </router-link>
-    <router-link to="/hypnosis-circle">
-      <div class="sun-item">
-        <i class="el-icon-help"></i>
       </div>
     </router-link>
     <router-link to="/cartoon-fan">
