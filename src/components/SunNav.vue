@@ -45,6 +45,11 @@
         <i class="el-icon-wind-power"></i>
       </div>
     </router-link>
+    <router-link to="/naruto-eyes">
+      <div class="sun-item">
+        <i class="el-icon-view"></i>
+      </div>
+    </router-link>
   </div>
 </template>
 

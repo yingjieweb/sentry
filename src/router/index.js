@@ -10,6 +10,7 @@ import TypeWriter from "@/views/TypeWriter"
 import RotatePetals from "@/views/RotatePetals"
 import ColorWave from "@/views/ColorWave"
 import CartoonFan from "@/views/CartoonFan"
+import NarutoEyes from "@/views/NarutoEyes"
 
 Vue.use(VueRouter)
 
@@ -62,6 +63,11 @@ const routes = [
     path: '/cartoon-fan',
     name: 'CartoonFan',
     component: CartoonFan
+  },
+  {
+    path: '/naruto-eyes',
+    name: 'NarutoEyes',
+    component: NarutoEyes
   }
 ]
 
