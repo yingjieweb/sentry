@@ -1,15 +1,13 @@
 <template>
   <div id="app">
-
     <el-container style="height: 100%">
-      <el-aside class="aside" style="background-color: salmon;">
+      <el-aside class="aside" style="background-color: #FACFCE;">
         <SunNav></SunNav>
       </el-aside>
-      <el-main style="background-color:sandybrown;">
+      <el-main style="background-color:#FACFCE;">
         <SunBody></SunBody>
       </el-main>
     </el-container>
-
   </div>
 </template>
 

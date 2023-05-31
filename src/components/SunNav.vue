@@ -61,10 +61,10 @@
 
 <style lang="scss" scoped>
   .sun-nav {
-    height: 100%;
+    height: 100vh;
+    padding: 20px 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     a {
@@ -73,14 +73,15 @@
     }
 
     .sun-item {
-      border: 1px solid red;
-      height: 60px;
       width: 95%;
-      margin: 10px;
+      height: 60px;
+      margin: 0 10px 10px;
+      border: 1px solid #99CCFF;
+      border-radius: 4px;
+      background-color: #6699CC;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: seagreen;
 
       &:hover {
         i {

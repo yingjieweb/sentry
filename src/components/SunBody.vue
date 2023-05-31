@@ -13,6 +13,7 @@
 <style lang="scss" scoped>
   .sun-body {
     height: 100%;
-    border: 1px solid seagreen;
+    border: 1px solid #FFFFCC;
+    border-radius: 4px;
   }
 </style>
