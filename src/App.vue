@@ -35,6 +35,10 @@ import NarutoEyes from "@/views/NarutoEyes";
 
 const routes = [
   {
+    icon: "el-icon-view",
+    component: NarutoEyes,
+  },
+  {
     icon: "el-icon-s-promotion",
     component: Spacecraft,
   },
@@ -69,10 +73,6 @@ const routes = [
   {
     icon: "el-icon-wind-power",
     component: CartoonFan,
-  },
-  {
-    icon: "el-icon-view",
-    component: NarutoEyes,
   },
 ];
 
@@ -124,6 +124,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
     }
   }
   .swiper-thumbs {
@@ -136,11 +137,11 @@ export default {
       .thumbs-item {
         width: 100%;
         height: 100%;
-        cursor: pointer;
+        background-color: #091921;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #fff;
+        cursor: pointer;
         &:hover {
           i {
             transform: rotate(360deg) scale(1.2);
@@ -148,7 +149,7 @@ export default {
           }
         }
         i {
-          font-size: 40px;
+          font-size: 50px;
           color: lightblue;
         }
       }
