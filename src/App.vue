@@ -1,83 +1,20 @@
 <template>
   <div id="app">
-    <!-- <el-container style="height: 100%">
-      <el-aside class="aside" style="background-color: #FACFCE;">
-        <SunNav></SunNav>
-      </el-aside>
-      <el-main style="background-color:#FACFCE;">
-        <SunBody></SunBody>
-      </el-main>
-    </el-container> -->
-    <div
-      style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
-      class="swiper mySwiper2"
-    >
+    <div class="swiper-screen" style="--swiper-navigation-color: #fff;">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+        <div class="swiper-slide" v-for="item in routes" :key="item.component">
+          <component :is="item.component"></component>
         </div>
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </div>
-    <div thumbsSlider="" class="swiper mySwiper">
+    <div class="swiper-thumbs">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </div>
-        <div class="swiper-slide">
-          <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+        <div class="swiper-slide" v-for="item in routes" :key="item.component">
+          <div class="thumbs-item">
+            <i :class="item.icon"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -85,24 +22,76 @@
 </template>
 
 <script>
-import SunNav from "./components/SunNav";
-import SunBody from "./components/SunBody";
+import HypnosisCircle from "@/views/HypnosisCircle";
+import Spacecraft from "@/views/Spacecraft";
+import CubeAlbum from "@/views/CubeAlbum";
+import ProgressBar from "@/views/ProgressBar";
+import TimeClock from "@/views/TimeClock";
+import TypeWriter from "@/views/TypeWriter";
+import RotatePetals from "@/views/RotatePetals";
+import ColorWave from "@/views/ColorWave";
+import CartoonFan from "@/views/CartoonFan";
+import NarutoEyes from "@/views/NarutoEyes";
+
+const routes = [
+  {
+    icon: "el-icon-s-promotion",
+    component: Spacecraft,
+  },
+  {
+    icon: "el-icon-help",
+    component: HypnosisCircle,
+  },
+  {
+    icon: "el-icon-menu",
+    component: CubeAlbum,
+  },
+  {
+    icon: "el-icon-s-unfold",
+    component: ProgressBar,
+  },
+  {
+    icon: "el-icon-time",
+    component: TimeClock,
+  },
+  {
+    icon: "el-icon-edit",
+    component: TypeWriter,
+  },
+  {
+    icon: "el-icon-magic-stick",
+    component: RotatePetals,
+  },
+  {
+    icon: "el-icon-s-grid",
+    component: ColorWave,
+  },
+  {
+    icon: "el-icon-wind-power",
+    component: CartoonFan,
+  },
+  {
+    icon: "el-icon-view",
+    component: NarutoEyes,
+  },
+];
 
 export default {
   name: "App",
-  components: {
-    SunNav,
-    SunBody,
+  data() {
+    return {
+      routes: routes,
+    };
   },
   mounted() {
-    var swiper = new Swiper(".mySwiper", {
+    const swiperThumbs = new Swiper(".swiper-thumbs", {
       loop: true,
       spaceBetween: 10,
       slidesPerView: 4,
       freeMode: true,
       watchSlidesProgress: true,
     });
-    var swiper2 = new Swiper(".mySwiper2", {
+    const swiper2 = new Swiper(".swiper-screen", {
       loop: true,
       spaceBetween: 10,
       navigation: {
@@ -110,7 +99,7 @@ export default {
         prevEl: ".swiper-button-prev",
       },
       thumbs: {
-        swiper: swiper,
+        swiper: swiperThumbs,
       },
     });
   },
@@ -122,68 +111,51 @@ export default {
 @import "~@/assets/styles/helper.scss";
 
 #app {
-  height: 100vh;
   width: 100vw;
-}
-
-@media only screen and (max-width: 500px) {
-  .aside {
-    display: none;
+  height: 100vh;
+  padding: 10px;
+  background-color: #1f262a;
+  overflow: hidden;
+  .swiper-screen {
+    height: 80%;
+    width: 100%;
+    padding-bottom: 10px;
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
-}
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-body {
-  background: #000;
-  color: #000;
-}
-.swiper {
-  width: 100%;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.swiper-slide {
-  background-size: cover;
-  background-position: center;
-}
-.mySwiper2 {
-  height: 80%;
-  width: 100%;
-}
-.mySwiper {
-  height: 20%;
-  box-sizing: border-box;
-  padding: 10px 0;
-}
-.mySwiper .swiper-slide {
-  width: 25%;
-  height: 100%;
-  opacity: 0.4;
-}
-.mySwiper .swiper-slide-thumb-active {
-  opacity: 1;
-}
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  .swiper-thumbs {
+    height: 20%;
+    box-sizing: border-box;
+    .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+      .thumbs-item {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        &:hover {
+          i {
+            transform: rotate(360deg) scale(1.2);
+            transition: all 0.8s;
+          }
+        }
+        i {
+          font-size: 40px;
+          color: lightblue;
+        }
+      }
+    }
+    .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
 }
 </style>
