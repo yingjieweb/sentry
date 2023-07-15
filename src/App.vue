@@ -2,7 +2,7 @@
   <div id="app">
     <div class="swiper-screen" style="--swiper-navigation-color: #fff;">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item in routes" :key="item.component">
+        <div class="swiper-slide" v-for="item in routes" :key="item.icon">
           <component :is="item.component"></component>
         </div>
       </div>
@@ -11,7 +11,7 @@
     </div>
     <div class="swiper-thumbs">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" v-for="item in routes" :key="item.component">
+        <div class="swiper-slide" v-for="item in routes" :key="item.icon">
           <div class="thumbs-item">
             <i :class="item.icon"></i>
           </div>
@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import EllipseSwiper from "./views/EllipseSwiper.vue";
 import HypnosisCircle from "@/views/HypnosisCircle";
 import Spacecraft from "@/views/Spacecraft";
 import CubeAlbum from "@/views/CubeAlbum";
@@ -34,6 +35,10 @@ import CartoonFan from "@/views/CartoonFan";
 import NarutoEyes from "@/views/NarutoEyes";
 
 const routes = [
+  {
+    icon: "el-icon-video-camera-solid",
+    component: EllipseSwiper,
+  },
   {
     icon: "el-icon-view",
     component: NarutoEyes,
