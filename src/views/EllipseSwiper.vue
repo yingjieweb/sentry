@@ -38,7 +38,7 @@ export default {
   },
   computed: {
     imageWidth() {
-      return this.$refs.banner.children[0].width
+      return this.$refs.banner.children[0].width + 10
     }
   },
   methods: {
