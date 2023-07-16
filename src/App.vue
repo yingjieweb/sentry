@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import NarutoEyes from "@/views/NarutoEyes";
 import EllipseSwiper from "./views/EllipseSwiper.vue";
 import HypnosisCircle from "@/views/HypnosisCircle";
 import Spacecraft from "@/views/Spacecraft";
@@ -32,16 +33,15 @@ import TypeWriter from "@/views/TypeWriter";
 import RotatePetals from "@/views/RotatePetals";
 import ColorWave from "@/views/ColorWave";
 import CartoonFan from "@/views/CartoonFan";
-import NarutoEyes from "@/views/NarutoEyes";
 
 const routes = [
   {
-    icon: "el-icon-video-camera-solid",
-    component: EllipseSwiper,
-  },
-  {
     icon: "el-icon-view",
     component: NarutoEyes,
+  },
+  {
+    icon: "el-icon-video-camera-solid",
+    component: EllipseSwiper,
   },
   {
     icon: "el-icon-s-promotion",
