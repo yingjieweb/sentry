@@ -9,8 +9,13 @@ import TypeWriter from "@/views/TypeWriter";
 import RotatePetals from "@/views/RotatePetals";
 import ColorWave from "@/views/ColorWave";
 import CartoonFan from "@/views/CartoonFan";
+import BounceBall from "@/views/bounce-ball.vue";
 
 export const routes = [
+  {
+    icon: "el-icon-basketball",
+    component: BounceBall,
+  },
   {
     icon: "el-icon-view",
     component: NarutoEyes,
