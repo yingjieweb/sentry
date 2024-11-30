@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~@/assets/styles/helper.scss";
+@import "~@/styles/helper.scss";
 
 .cartoon-fan {
   width: 100%;

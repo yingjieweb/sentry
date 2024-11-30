@@ -112,8 +112,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~@/assets/styles/reset.scss";
-@import "~@/assets/styles/helper.scss";
+@import "~@/styles/reset.scss";
+@import "~@/styles/helper.scss";
 
 #app {
   width: 100vw;
